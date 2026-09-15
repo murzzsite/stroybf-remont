@@ -127,12 +127,30 @@ h1, h2, h3 { font-family: var(--font-head); font-weight: 600; line-height: 1.18;
 .step p { font-size: 13.5px; color: var(--ink-soft); }
 
 /* CASES */
-.cases-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-.case { border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); background: var(--surface); }
-.case img { height: 220px; object-fit: cover; }
-.case__body { padding: 18px 20px; }
-.case__body h3 { font-size: 16px; margin-bottom: 6px; }
-.case__body p { font-size: 13.5px; color: var(--ink-soft); }
+.cases-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.case { display: block; width: 100%; font: inherit; color: inherit; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); background: var(--surface); cursor: pointer; transition: transform .2s, box-shadow .2s; text-align: left; padding: 0; }
+.case:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+.case__img-wrap { position: relative; display: block; }
+.case img { height: 190px; width: 100%; object-fit: cover; display: block; }
+.case__count { position: absolute; bottom: 10px; right: 10px; background: rgba(42,36,29,0.7); color: #fff; font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 999px; display: flex; align-items: center; gap: 5px; }
+.case__count svg { width: 13px; height: 13px; }
+.case__body { display: block; padding: 16px 18px; }
+.case__body h3 { font-size: 15.5px; margin-bottom: 4px; font-family: var(--font-head); font-weight: 600; }
+.case__body p { font-size: 13px; color: var(--ink-soft); margin: 0; }
+
+/* LIGHTBOX */
+.lightbox { position: fixed; inset: 0; background: rgba(20,16,12,0.94); z-index: 1000; display: none; align-items: center; justify-content: center; padding: 30px; }
+.lightbox.is-open { display: flex; }
+.lightbox__stage { max-width: 1100px; width: 100%; max-height: 88vh; display: flex; flex-direction: column; align-items: center; }
+.lightbox__stage img { max-width: 100%; max-height: 76vh; object-fit: contain; border-radius: 10px; background: #000; }
+.lightbox__caption { color: rgba(255,255,255,0.85); margin-top: 16px; font-size: 14.5px; display: flex; align-items: center; gap: 14px; text-align: center; }
+.lightbox__counter { color: rgba(255,255,255,0.5); font-size: 13px; }
+.lightbox__close { position: absolute; top: 20px; right: 24px; background: none; border: none; color: #fff; font-size: 38px; line-height: 1; cursor: pointer; opacity: .8; }
+.lightbox__close:hover { opacity: 1; }
+.lightbox__nav { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: #fff; font-size: 30px; width: 52px; height: 52px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background .2s; }
+.lightbox__nav:hover { background: rgba(255,255,255,0.2); }
+.lightbox__nav--prev { left: 20px; }
+.lightbox__nav--next { right: 20px; }
 
 /* CHANNELS */
 .channels-section { padding: 56px 0; }
@@ -208,16 +226,20 @@ h1, h2, h3 { font-family: var(--font-head); font-weight: 600; line-height: 1.18;
   .hero h1 { font-size: 34px; }
   .adv-grid, .services-grid { grid-template-columns: repeat(2, 1fr); }
   .process-grid { grid-template-columns: repeat(2, 1fr); gap: 28px; }
-  .cases-grid { grid-template-columns: 1fr; }
+  .cases-grid { grid-template-columns: repeat(2, 1fr); }
   .form-section__inner { grid-template-columns: 1fr; }
   .price-highlight { flex-direction: column; text-align: center; }
   .price-row { grid-template-columns: 1fr; gap: 4px; }
   .price-row span:first-child { color: var(--accent-dark); }
+  .lightbox__nav { width: 42px; height: 42px; font-size: 24px; }
+  .lightbox__nav--prev { left: 8px; }
+  .lightbox__nav--next { right: 8px; }
 }
 @media (max-width: 560px) {
   .header__cta { display: none; }
   .header__phone { display: none; }
   .adv-grid, .services-grid { grid-template-columns: 1fr; }
+  .cases-grid { grid-template-columns: 1fr; }
   .form__row { grid-template-columns: 1fr; }
   .hero__stats { gap: 20px; }
 }

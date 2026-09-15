@@ -204,23 +204,24 @@
   <section class="section cases-section" id="cases">
     <div class="container">
       <h2 class="section__title">Объекты</h2>
-      <p class="section__sub">Реальные фото и видео с наших объектов — весь контент снимаем и монтируем сами</p>
-      <div class="cases-grid">
-        <div class="case reveal">
-          <img src="img/apt-living.jpg" alt="Ремонт квартиры, Герцена" loading="lazy">
-          <div class="case__body"><h3>Квартира на Герцена, Чебоксары</h3><p>Ремонт под ключ: черновые работы, чистовая отделка, кухня-гостиная</p></div>
-        </div>
-        <div class="case reveal">
-          <img src="img/house-kitchen.jpg" alt="Ремонт дома, СНТ Волга" loading="lazy">
-          <div class="case__body"><h3>Дом в СНТ Волга</h3><p>Полный ремонт загородного дома под ключ, кухня-гостиная</p></div>
-        </div>
-        <div class="case reveal">
-          <img src="img/banya-interior.jpg" alt="Отделка бани, Шомиково" loading="lazy">
-          <div class="case__body"><h3>Баня в Шомиково</h3><p>Внутренняя отделка бани из бревна — сезонный проект</p></div>
-        </div>
-      </div>
+      <p class="section__sub">Реальные фото с наших объектов — весь контент снимаем сами. Нажмите на карточку, чтобы посмотреть все фото объекта</p>
+      <div class="cases-grid" id="casesGrid"></div>
     </div>
   </section>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox__close" id="lightboxClose" aria-label="Закрыть">&times;</button>
+    <button class="lightbox__nav lightbox__nav--prev" id="lightboxPrev" aria-label="Предыдущее фото">&#8249;</button>
+    <div class="lightbox__stage">
+      <img id="lightboxImg" src="" alt="">
+      <div class="lightbox__caption">
+        <span id="lightboxTitle"></span>
+        <span class="lightbox__counter" id="lightboxCounter"></span>
+      </div>
+    </div>
+    <button class="lightbox__nav lightbox__nav--next" id="lightboxNext" aria-label="Следующее фото">&#8250;</button>
+  </div>
 
   <!-- CHANNELS -->
   <section class="section channels-section">
@@ -305,7 +306,7 @@
     <div class="footer__col">
       <h4>Контакты</h4>
       <a href="tel:+79276674318">+7 (927) 667-43-18</a>
-      <a href="https://t.me/stroybf_admin" target="_blank" rel="noopener">Telegram: @stroybf_admin</a>
+      <a href="https://max.ru/join/gFTGsGvpMNhGtbCafYtz6wlXA4KxgcYbRA9e-tOboVM" target="_blank" rel="noopener">Написать в MAX</a>
       <span style="font-size:14px;color:rgba(255,255,255,0.5);">г. Чебоксары, ул. Фёдора Гладкова, 22</span>
     </div>
     <div class="footer__col">
@@ -330,8 +331,8 @@
   </div>
 </footer>
 
-<a href="https://t.me/stroybf_admin" class="fab" target="_blank" rel="noopener" aria-label="Написать в Telegram">
-  <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M21.05 3.16L2.9 10.36c-1.24.5-1.23 1.19-.23 1.5l4.65 1.45 1.8 5.53c.22.6.11.84.75.84.5 0 .72-.23 1-.5l2.4-2.33 4.98 3.68c.92.5 1.58.24 1.81-.85L23.9 4.7c.32-1.33-.5-1.93-1.85-1.54z"/></svg>
+<a href="https://max.ru/join/gFTGsGvpMNhGtbCafYtz6wlXA4KxgcYbRA9e-tOboVM" class="fab" target="_blank" rel="noopener" aria-label="Написать в MAX">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5c-1.3 0-2.53-.3-3.62-.83L3 21l1.9-5.7A8.46 8.46 0 0 1 3.5 11.5 8.5 8.5 0 0 1 12 3a8.5 8.5 0 0 1 9 8.5z"/></svg>
 </a>
 
 <script src="script.js"></script>
