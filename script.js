@@ -85,17 +85,20 @@
   });
 
   // ===== CASES GALLERY =====
+  const numbered = (prefix, count) => Array.from({ length: count }, (_, i) => `img/${prefix}-${i + 1}.jpg`);
   const CASES = [
-    { title: 'Квартира на Герцена', desc: 'Ремонт под ключ: кухня-гостиная, спальни', photos: ['img/apt-gertsena-1.jpg', 'img/apt-gertsena-2.jpg', 'img/apt-gertsena-3.jpg'] },
-    { title: 'Квартира на Миначева', desc: 'Ремонт под ключ, 19к-120', photos: ['img/apt-minacheva-1.jpg', 'img/apt-minacheva-2.jpg', 'img/apt-minacheva-3.jpg', 'img/apt-minacheva-4.jpg'] },
-    { title: 'Квартира на Гагарина', desc: 'Ремонт под ключ, 36-50', photos: ['img/apt-gagarina-1.jpg', 'img/apt-gagarina-2.jpg', 'img/apt-gagarina-3.jpg'] },
-    { title: 'Квартира на Калинина', desc: 'Ремонт под ключ, 86-197', photos: ['img/apt-kalinina-1.jpg', 'img/apt-kalinina-2.jpg', 'img/apt-kalinina-3.jpg', 'img/apt-kalinina-4.jpg'] },
-    { title: 'Квартира на Кадыкова', desc: 'Ремонт под ключ, 40к1-1', photos: ['img/apt-kadykova-1.jpg', 'img/apt-kadykova-2.jpg', 'img/apt-kadykova-3.jpg', 'img/apt-kadykova-4.jpg'] },
-    { title: 'Дом в СНТ Волга', desc: 'Полный ремонт загородного дома под ключ', photos: ['img/house-volga-1.jpg', 'img/house-volga-2.jpg', 'img/house-volga-3.jpg'] },
-    { title: 'Баня в Шомиково', desc: 'Внутренняя отделка бани из бревна', photos: ['img/banya-shomikovo-1.jpg', 'img/banya-shomikovo-2.jpg', 'img/banya-shomikovo-3.jpg'] },
-    { title: 'Баня в Русской Сорме', desc: 'Отделка бани под ключ', photos: ['img/banya-sorma-1.jpg', 'img/banya-sorma-2.jpg', 'img/banya-sorma-3.jpg', 'img/banya-sorma-4.jpg'] },
-    { title: 'Дом-баня в Альгешево', desc: 'Строительство и отделка бани из бруса', photos: ['img/dom-algeshevo-1.jpg', 'img/dom-algeshevo-2.jpg', 'img/dom-algeshevo-3.jpg', 'img/dom-algeshevo-4.jpg'] },
-    { title: 'Баня в Козловке', desc: 'Отделка бани под ключ', photos: ['img/banya-kozlovka-1.jpg', 'img/banya-kozlovka-2.jpg', 'img/banya-kozlovka-3.jpg', 'img/banya-kozlovka-4.jpg'] },
+    { title: '2-комн. квартира, 74,8 м²', desc: '(Новостройка) ул. Герцена 2к1', photos: numbered('apt-gertsena', 20), video: 'https://drive.google.com/file/d/1zwLmzPC9_9W2GvVO2jCL1avQN_nMtNbZ/view' },
+    { title: 'Квартира на Афанасьева', desc: 'Ремонт под ключ', photos: numbered('apt-afanasyeva', 11), video: 'https://drive.google.com/file/d/10N-kI0lDjKZ5g2378YtySTlUTWiXam5P/view' },
+    { title: 'Квартира на Миначева', desc: 'Ремонт под ключ, 19к-120', photos: numbered('apt-minacheva', 14), video: 'https://drive.google.com/file/d/1OlYVHappTEo_wyGtaqmlwVsnWLt8r3DX/view' },
+    { title: 'Квартира на Гагарина', desc: 'Ремонт под ключ, 36-50', photos: numbered('apt-gagarina', 10), video: 'https://drive.google.com/file/d/1a55J3zSnRTqT7xUf2YL_MAFEGqbiC2Td/view' },
+    { title: 'Квартира на Калинина', desc: 'Ремонт под ключ, 86-197', photos: numbered('apt-kalinina', 10), video: 'https://drive.google.com/file/d/1p7U0eCDjlmv8SG7Qhkg6wGNpQqzgpcwm/view' },
+    { title: 'Квартира на Кадыкова', desc: 'Ремонт под ключ, 40к1-1', photos: numbered('apt-kadykova', 10), video: 'https://drive.google.com/file/d/1ih4isC0IUkWGbpI3jLfqb_TWnRLU8eiY/view' },
+    { title: 'Дом в СНТ Волга', desc: 'Полный ремонт загородного дома под ключ', photos: numbered('house-volga', 9), video: 'https://drive.google.com/file/d/1iAhJGsjU9MQK3InkVoQn6cP3Rx5XikPi/view' },
+    { title: 'Дом-баня в мкр. Соляное', desc: 'Строительство и отделка бани, ул. Оригинальная 50', photos: numbered('dom-solyanoe', 10), video: 'https://drive.google.com/file/d/1_ogkvuUoZSOjuceox8ekxrGQZL1CzIi1/view' },
+    { title: 'Баня в Шомиково', desc: 'Внутренняя отделка бани из бревна', photos: numbered('banya-shomikovo', 10), video: 'https://drive.google.com/file/d/13O_S9o4QcWvlYVNRoaetFtpTsyAIKGXk/view' },
+    { title: 'Баня в Русской Сорме', desc: 'Отделка бани под ключ', photos: numbered('banya-sorma', 15), video: 'https://drive.google.com/file/d/1RkYLeLsry_weMsnz1GeNC5JwGK_PURAJ/view' },
+    { title: 'Дом-баня в Альгешево', desc: 'Строительство и отделка бани из бруса', photos: numbered('dom-algeshevo', 9), video: 'https://drive.google.com/file/d/1C2hMMqTciWAkJJgXJqFmtSfildoHXOg-/view' },
+    { title: 'Баня в Козловке', desc: 'Отделка бани под ключ', photos: numbered('banya-kozlovka', 18), video: 'https://drive.google.com/file/d/1fS33i64sHUylRSjFn_Z4bbrOlV7AD1_Z/view' },
   ];
 
   const casesGrid = document.getElementById('casesGrid');
@@ -116,6 +119,7 @@
   const lightboxImg = document.getElementById('lightboxImg');
   const lightboxTitle = document.getElementById('lightboxTitle');
   const lightboxCounter = document.getElementById('lightboxCounter');
+  const lightboxVideo = document.getElementById('lightboxVideo');
   let curCase = 0, curPhoto = 0;
 
   function showPhoto() {
@@ -124,6 +128,8 @@
     lightboxImg.alt = c.title;
     lightboxTitle.textContent = c.title;
     lightboxCounter.textContent = (curPhoto + 1) + ' / ' + c.photos.length;
+    if (lightboxVideo) lightboxVideo.href = c.video || '#';
+    if (lightboxVideo) lightboxVideo.hidden = !c.video;
   }
   function openLightbox(caseIndex) {
     curCase = caseIndex;
