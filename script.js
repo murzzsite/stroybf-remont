@@ -88,17 +88,17 @@
   const numbered = (prefix, count) => Array.from({ length: count }, (_, i) => `img/${prefix}-${i + 1}.jpg`);
   const CASES = [
     { title: '2-комн. квартира, 74,8 м²', desc: '(Новостройка) ул. Герцена 2к1', photos: numbered('apt-gertsena', 20), video: 'https://drive.google.com/file/d/1zwLmzPC9_9W2GvVO2jCL1avQN_nMtNbZ/view' },
-    { title: 'Квартира на Афанасьева', desc: 'Ремонт под ключ', photos: numbered('apt-afanasyeva', 11), video: 'https://drive.google.com/file/d/10N-kI0lDjKZ5g2378YtySTlUTWiXam5P/view' },
-    { title: 'Квартира на Миначева', desc: 'Ремонт под ключ, 19к-120', photos: numbered('apt-minacheva', 14), video: 'https://drive.google.com/file/d/1OlYVHappTEo_wyGtaqmlwVsnWLt8r3DX/view' },
-    { title: 'Квартира на Гагарина', desc: 'Ремонт под ключ, 36-50', photos: numbered('apt-gagarina', 10), video: 'https://drive.google.com/file/d/1a55J3zSnRTqT7xUf2YL_MAFEGqbiC2Td/view' },
-    { title: 'Квартира на Калинина', desc: 'Ремонт под ключ, 86-197', photos: numbered('apt-kalinina', 10), video: 'https://drive.google.com/file/d/1p7U0eCDjlmv8SG7Qhkg6wGNpQqzgpcwm/view' },
-    { title: 'Квартира на Кадыкова', desc: 'Ремонт под ключ, 40к1-1', photos: numbered('apt-kadykova', 10), video: 'https://drive.google.com/file/d/1ih4isC0IUkWGbpI3jLfqb_TWnRLU8eiY/view' },
-    { title: 'Дом в СНТ Волга', desc: 'Полный ремонт загородного дома под ключ', photos: numbered('house-volga', 9), video: 'https://drive.google.com/file/d/1iAhJGsjU9MQK3InkVoQn6cP3Rx5XikPi/view' },
-    { title: 'Дом-баня в мкр. Соляное', desc: 'Строительство и отделка бани, ул. Оригинальная 50', photos: numbered('dom-solyanoe', 10), video: 'https://drive.google.com/file/d/1_ogkvuUoZSOjuceox8ekxrGQZL1CzIi1/view' },
-    { title: 'Баня в Шомиково', desc: 'Внутренняя отделка бани из бревна', photos: numbered('banya-shomikovo', 10), video: 'https://drive.google.com/file/d/13O_S9o4QcWvlYVNRoaetFtpTsyAIKGXk/view' },
-    { title: 'Баня в Русской Сорме', desc: 'Отделка бани под ключ', photos: numbered('banya-sorma', 15), video: 'https://drive.google.com/file/d/1RkYLeLsry_weMsnz1GeNC5JwGK_PURAJ/view' },
-    { title: 'Дом-баня в Альгешево', desc: 'Строительство и отделка бани из бруса', photos: numbered('dom-algeshevo', 9), video: 'https://drive.google.com/file/d/1C2hMMqTciWAkJJgXJqFmtSfildoHXOg-/view' },
-    { title: 'Баня в Козловке', desc: 'Отделка бани под ключ', photos: numbered('banya-kozlovka', 18), video: 'https://drive.google.com/file/d/1fS33i64sHUylRSjFn_Z4bbrOlV7AD1_Z/view' },
+    { title: '2-комн. квартира, 87,7 м²', desc: '(Новостройка) ул. Афанасьева 7к3', photos: numbered('apt-afanasyeva', 11), video: 'https://drive.google.com/file/d/10N-kI0lDjKZ5g2378YtySTlUTWiXam5P/view' },
+    { title: '2-комн. квартира, 71,1 м²', desc: '(Новостройка) ул. Миначева 19к1', photos: numbered('apt-minacheva', 14), video: 'https://drive.google.com/file/d/1OlYVHappTEo_wyGtaqmlwVsnWLt8r3DX/view' },
+    { title: '1-комн. квартира, 33 м²', desc: '(Вторичка) ул. Гагарина 36', photos: numbered('apt-gagarina', 10), video: 'https://drive.google.com/file/d/1a55J3zSnRTqT7xUf2YL_MAFEGqbiC2Td/view' },
+    { title: '2-комн. квартира, 97,9 м²', desc: '(Новостройка) ул. Калинина 86', photos: numbered('apt-kalinina', 10), video: 'https://drive.google.com/file/d/1p7U0eCDjlmv8SG7Qhkg6wGNpQqzgpcwm/view' },
+    { title: '2-комн. квартира, 63,1 м²', desc: '(Новостройка) ул. Кадыкова 40к1', photos: numbered('apt-kadykova', 10), video: 'https://drive.google.com/file/d/1ih4isC0IUkWGbpI3jLfqb_TWnRLU8eiY/view' },
+    { title: 'Дачный дом из блоков 6х6, 1,5 этажа', desc: 'СНТ Волга', photos: numbered('house-volga', 9), video: 'https://drive.google.com/file/d/1iAhJGsjU9MQK3InkVoQn6cP3Rx5XikPi/view' },
+    { title: 'Баня из кирпича 9х6,5', desc: 'мкр. Соляное', photos: numbered('dom-solyanoe', 10), video: 'https://drive.google.com/file/d/1_ogkvuUoZSOjuceox8ekxrGQZL1CzIi1/view' },
+    { title: 'Баня из сруба 6х8, 41 м²', desc: 'д. Шомиково', photos: numbered('banya-shomikovo', 10), video: 'https://drive.google.com/file/d/13O_S9o4QcWvlYVNRoaetFtpTsyAIKGXk/view' },
+    { title: 'Баня из блоков 6,4х4,4, 1,5 этажа', desc: 'д. Русская Сорма', photos: numbered('banya-sorma', 15), video: 'https://drive.google.com/file/d/1RkYLeLsry_weMsnz1GeNC5JwGK_PURAJ/view' },
+    { title: 'Дом-баня из бруса 6х6, 2 этажа', desc: 'п. Альгешево', photos: numbered('dom-algeshevo', 9), video: 'https://drive.google.com/file/d/1C2hMMqTciWAkJJgXJqFmtSfildoHXOg-/view' },
+    { title: 'Баня из блоков 6х4 с верандой 5х3', desc: 'г. Козловка', photos: numbered('banya-kozlovka', 18), video: 'https://drive.google.com/file/d/1fS33i64sHUylRSjFn_Z4bbrOlV7AD1_Z/view' },
   ];
 
   const casesGrid = document.getElementById('casesGrid');
